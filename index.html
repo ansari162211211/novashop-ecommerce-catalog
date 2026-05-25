@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Modern Advanced E-Commerce Product Catalog">
+
+    <meta name="keywords"
+        content="Ecommerce, Product Catalog, JavaScript, Responsive Website">
+
+    <meta name="author"
+        content="Thamimun Ansari">
+
+    <title>NovaShop - Premium Store</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet"
+        href="style.css">
+
+</head>
+
+<body>
+
+    <!-- DARK MODE -->
+    <button id="themeToggle"
+        class="theme-toggle">
+
+        🌙
+
+    </button>
+
+    <!-- HEADER -->
+    <header class="header">
+
+        <nav class="navbar">
+
+            <h1 class="logo">
+
+                <i class="fa-solid fa-store"></i>
+                NovaShop
+
+            </h1>
+
+            <ul class="nav-links">
+
+                <li><a href="#home">Home</a></li>
+
+                <li><a href="#products">Products</a></li>
+
+                <li><a href="#deals">Deals</a></li>
+
+                <li><a href="#features">Features</a></li>
+
+                <li><a href="#about">About</a></li>
+
+                <li><a href="#contact">Contact</a></li>
+
+            </ul>
+
+            <button type="button" class="cart" id="cartBtn" aria-label="Open cart">
+
+                <i class="fa-solid fa-cart-shopping"></i>
+
+                <span id="cartCount">0</span>
+
+            </button>
+
+        </nav>
+
+    </header>
+
+    <!-- HERO -->
+    <section class="hero"
+        id="home">
+
+        <div class="hero-content">
+
+            <h2>
+                Premium Shopping Experience
+            </h2>
+
+            <p>
+                Discover stylish products with modern responsive UI,
+                smooth animations, and advanced frontend features.
+            </p>
+
+            <button class="shop-btn">
+
+                Shop Now
+
+            </button>
+
+        </div>
+
+        <div class="hero-image">
+
+            <a href="https://www.amazon.in/s?k=smart+watch" target="_blank" rel="noopener noreferrer" class="hero-watch-link" title="Shop smart watches on Amazon">
+
+                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=1200&auto=format&fit=crop"
+                    alt="Smart Watch">
+
+                <span class="hero-link-badge">Shop Smart Watches →</span>
+
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- QUICK LINKS -->
+    <section class="quick-links" id="quicklinks">
+
+        <h2 class="section-title section-title--light">Quick Navigation</h2>
+
+        <div class="quick-links-grid">
+
+            <a href="#products" class="quick-link-card">
+                <i class="fa-solid fa-box-open"></i>
+                <span>Browse Products</span>
+            </a>
+
+            <a href="#deals" class="quick-link-card">
+                <i class="fa-solid fa-tags"></i>
+                <span>Today's Deals</span>
+            </a>
+
+            <a href="https://www.amazon.in" target="_blank" rel="noopener noreferrer" class="quick-link-card quick-link-card--amazon">
+                <i class="fa-brands fa-amazon"></i>
+                <span>Shop on Amazon</span>
+            </a>
+
+            <a href="https://www.flipkart.com" target="_blank" rel="noopener noreferrer" class="quick-link-card quick-link-card--flipkart">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span>Shop on Flipkart</span>
+            </a>
+
+            <a href="#features" class="quick-link-card">
+                <i class="fa-solid fa-star"></i>
+                <span>Our Features</span>
+            </a>
+
+            <a href="#contact" class="quick-link-card">
+                <i class="fa-solid fa-envelope"></i>
+                <span>Contact Us</span>
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- SEARCH -->
+    <section class="search-section">
+
+        <input type="text"
+            id="searchInput"
+            placeholder="Search products...">
+
+        <select id="categoryFilter">
+
+            <option value="all">All Categories</option>
+
+            <option value="electronics">Electronics</option>
+
+            <option value="fashion">Fashion</option>
+
+            <option value="accessories">Accessories</option>
+
+            <option value="home">Home & Kitchen</option>
+
+        </select>
+
+    </section>
+
+    <!-- PRODUCTS -->
+    <section class="products"
+        id="products">
+
+        <h2 class="section-title">
+            Featured Products
+        </h2>
+
+        <div class="product-grid"
+            id="productGrid">
+
+        </div>
+
+    </section>
+
+    <!-- DEALS -->
+    <section class="deals" id="deals">
+
+        <h2 class="section-title">Hot Deals & Offers</h2>
+
+        <div class="deals-grid">
+
+            <a href="https://www.amazon.in/s?k=electronics+deals" target="_blank" rel="noopener noreferrer" class="deal-card deal-card--outline-blue">
+                <span class="deal-tag">Up to 40% off</span>
+                <h3>Electronics Sale</h3>
+                <p>Smartphones, watches &amp; audio on Amazon</p>
+                <span class="deal-link-text">View on Amazon →</span>
+            </a>
+
+            <a href="https://www.flipkart.com/search?q=fashion+sale" target="_blank" rel="noopener noreferrer" class="deal-card deal-card--outline-gold">
+                <span class="deal-tag">New Season</span>
+                <h3>Fashion Fest</h3>
+                <p>Sneakers, jackets &amp; apparel on Flipkart</p>
+                <span class="deal-link-text">View on Flipkart →</span>
+            </a>
+
+            <a href="#products" class="deal-card deal-card--outline-cyan">
+                <span class="deal-tag">NovaShop</span>
+                <h3>Featured Catalog</h3>
+                <p>20 curated products with correct store links</p>
+                <span class="deal-link-text">Browse all products →</span>
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- FEATURES -->
+    <section class="features"
+        id="features">
+
+        <h2 class="section-title">
+            Why Choose Us?
+        </h2>
+
+        <div class="feature-grid">
+
+            <div class="feature-card">
+
+                <i class="fa-solid fa-truck-fast"></i>
+
+                <h3>Fast Delivery</h3>
+
+                <p>
+                    Super fast and secure shipping services.
+                </p>
+
+            </div>
+
+            <div class="feature-card">
+
+                <i class="fa-solid fa-credit-card"></i>
+
+                <h3>Secure Payment</h3>
+
+                <p>
+                    Trusted encrypted payment system.
+                </p>
+
+            </div>
+
+            <div class="feature-card">
+
+                <i class="fa-solid fa-headset"></i>
+
+                <h3>24/7 Support</h3>
+
+                <p>
+                    Customer support available anytime.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- EXTRA OPTIONS (new — original 3 feature cards unchanged above) -->
+    <section class="extra-options" id="extras">
+
+        <h2 class="section-title">More Shopping Options</h2>
+
+        <div class="extra-options-grid">
+
+            <div class="extra-option-card">
+                <i class="fa-solid fa-rotate-left"></i>
+                <h3>Easy Returns</h3>
+                <p>Hassle-free return policy on partner stores.</p>
+                <a href="https://www.amazon.in/gp/help/customer/display.html?nodeId=201819090" target="_blank" rel="noopener noreferrer">Amazon returns policy</a>
+            </div>
+
+            <div class="extra-option-card">
+                <i class="fa-solid fa-gift"></i>
+                <h3>Gift Cards</h3>
+                <p>Send digital gift cards to friends and family.</p>
+                <a href="https://www.amazon.in/gift-card-store/b?ie=UTF8&node=3704982031" target="_blank" rel="noopener noreferrer">Buy Amazon gift cards</a>
+            </div>
+
+            <div class="extra-option-card">
+                <i class="fa-solid fa-shield-halved"></i>
+                <h3>Buyer Protection</h3>
+                <p>Shop safely on verified marketplace links.</p>
+                <a href="https://www.flipkart.com/pages/terms" target="_blank" rel="noopener noreferrer">Flipkart buyer terms</a>
+            </div>
+
+            <div class="extra-option-card">
+                <i class="fa-solid fa-location-dot"></i>
+                <h3>Track Orders</h3>
+                <p>Track deliveries directly on store websites.</p>
+                <a href="https://www.amazon.in/gp/your-account/order-history" target="_blank" rel="noopener noreferrer">Amazon order history</a>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+
+        <h2 class="section-title">About NovaShop</h2>
+
+        <div class="about-content">
+
+            <p>
+                NovaShop is your smart shopping hub — browse products, add to cart, and open the
+                <strong>exact product</strong> on Amazon or Flipkart with one tap. Every link uses a
+                precise search so you land on the right item, not the wrong page.
+            </p>
+
+            <ul class="about-links">
+
+                <li><a href="#home">← Back to Home</a></li>
+
+                <li><a href="#products">View all products</a></li>
+
+                <li><a href="#deals">See deals</a></li>
+
+                <li><a href="#contact">Get in touch</a></li>
+
+            </ul>
+
+        </div>
+
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact"
+        id="contact">
+
+        <h2 class="section-title">
+            Contact Us
+        </h2>
+
+        <form class="contact-form">
+
+            <input type="text"
+                placeholder="Your Name"
+                required>
+
+            <input type="email"
+                placeholder="Your Email"
+                required>
+
+            <textarea rows="5"
+                placeholder="Your Message"
+                required></textarea>
+
+            <button type="submit">
+
+                Send Message
+
+            </button>
+
+        </form>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <nav class="footer-nav" aria-label="Footer navigation">
+
+            <a href="#home">Home</a>
+
+            <a href="#products">Products</a>
+
+            <a href="#deals">Deals</a>
+
+            <a href="#features">Features</a>
+
+            <a href="#about">About</a>
+
+            <a href="#contact">Contact</a>
+
+            <a href="https://www.amazon.in" target="_blank" rel="noopener noreferrer">Amazon.in</a>
+
+            <a href="https://www.flipkart.com" target="_blank" rel="noopener noreferrer">Flipkart</a>
+
+        </nav>
+
+        <p class="footer-copy">
+            © 2026 NovaShop | Built by Thamimun Ansari
+        </p>
+
+    </footer>
+
+    <!-- CART DRAWER -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <aside class="cart-drawer" id="cartDrawer" aria-hidden="true">
+
+        <div class="cart-drawer-header">
+
+            <h2>
+                <i class="fa-solid fa-bag-shopping"></i>
+                Your Cart
+            </h2>
+
+            <button type="button" class="cart-close" id="cartClose" aria-label="Close cart">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+        </div>
+
+        <ul class="cart-items" id="cartItems"></ul>
+
+        <p class="cart-empty" id="cartEmpty">Your cart is empty. Add some products!</p>
+
+        <div class="cart-footer" id="cartFooter">
+
+            <p class="cart-total">
+                Total items: <strong id="cartTotalItems">0</strong>
+            </p>
+
+            <p class="cart-hint">Tap any item to view on Amazon or Flipkart</p>
+
+        </div>
+
+    </aside>
+
+    <!-- TOAST -->
+    <div id="toast" class="toast"></div>
+
+    <!-- JS -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
